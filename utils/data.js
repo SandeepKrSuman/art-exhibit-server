@@ -96,7 +96,7 @@ export const data = [
     price: 2500,
     discount: 10,
     rating: {
-      star: 4.3,
+      star: 3.3,
       count: 59,
     },
     stock: stocks[Math.floor(Math.random() * stocks.length)],
@@ -113,8 +113,8 @@ export const data = [
     price: 2800,
     discount: 10,
     rating: {
-      star: 4.3,
-      count: 59,
+      star: 2.3,
+      count: 35,
     },
     stock: stocks[Math.floor(Math.random() * stocks.length)],
     artist: "Benjamin Clark",
@@ -135,7 +135,7 @@ export const data = [
     price: 2500,
     discount: 5,
     rating: {
-      star: 4.8,
+      star: 3.8,
       count: 68,
     },
     stock: stocks[Math.floor(Math.random() * stocks.length)],
@@ -356,8 +356,8 @@ export const data = [
     price: 2200,
     discount: 10,
     rating: {
-      star: 4.5,
-      count: 50,
+      star: 2.5,
+      count: 20,
     },
     stock: stocks[Math.floor(Math.random() * stocks.length)],
     artist: "Raman Dhuv",
