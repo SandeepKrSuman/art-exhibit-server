@@ -10,7 +10,10 @@ import {
   signup,
 } from "../controllers/authController.js";
 import { findUser, updateProfile } from "../controllers/userController.js";
-import { getProducts } from "../controllers/productsController.js";
+import {
+  getProducts,
+  getSingleProduct,
+} from "../controllers/productsController.js";
 
 router.post("/auth/signup", signup);
 
@@ -29,5 +32,7 @@ router.post("/user/profile/update", middleware, (req, res) => {
 });
 
 router.get("/products", getProducts);
+
+router.post("/products/single", getSingleProduct);
 
 export default router;
