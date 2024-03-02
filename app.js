@@ -6,7 +6,7 @@ import api from "./routes/index.js";
 
 const app = express();
 
-const { USER_NAME, PASSWORD } = process.env;
+const { USER_NAME, PASSWORD, CLIENT_ORIGIN } = process.env;
 const uri = `mongodb://${USER_NAME}:${PASSWORD}@cluster0-shard-00-00.kmfwq.mongodb.net:27017,cluster0-shard-00-01.kmfwq.mongodb.net:27017,cluster0-shard-00-02.kmfwq.mongodb.net:27017/ArtExhibit?ssl=true&replicaSet=atlas-a9v4hk-shard-0&authSource=admin&retryWrites=true&w=majority`;
 
 //use the following uri when running local MongoDB server
@@ -20,7 +20,7 @@ mongoose
   .then(() => console.log("connected to DB"))
   .catch((err) => console.log(err));
 
-app.use(cors());
+app.use(cors({ origin: `${CLIENT_ORIGIN || "http://localhost:3000"}` }));
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
